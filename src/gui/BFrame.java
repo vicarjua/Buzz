@@ -30,7 +30,7 @@ public class BFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle(name);
         setResizable(false);
-        getContentPane().setPreferredSize(new Dimension(1000, 563));
+        getContentPane().setPreferredSize(new Dimension(563, 1000));
         pack();
         pack();
         setLocationRelativeTo(null);

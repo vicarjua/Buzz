@@ -1,4 +1,4 @@
-TEXT-How many minutes is a rugby match?-sport-80-75-30-50
+TEXT-Cómo se llama la madre de la novia?-sport-80-75-30-50
 TEXT-How long is an Olympic swimming pool?-sport-Fifty meters-Seventy meters-Twenty meters-Ten meters
 TEXT-In which country is the Interlagos F1 circuit ?-sport-Brazil-Spain-Germany-Italy
 TEXT-What color is cobalt?-science-Blue-Red-Yellow-Cyan
@@ -17,7 +17,7 @@ IMAGE-Who is the guy in the photo?-science-Linus Torvalds-Mark Zuckerberg-Guido 
 TEXT-When was William Shakespeare born?-history-23 April 1564-23 February 1784-1 January 1568-21 February 1555 
 TEXT-On what date did the Battle of Culloden take place?-history-16th April 1746-17th April 1745-18th April 1743-12th April 1712
 TEXT-Who was Henry VIll's first wife?-history-Catherine-Mary-Christin-Helen
-TEXT-When did Margaret Thatcher become Prime Minister?-history-1979-1978-1989-1969
+TEXT-Cómo se llama el padre del novio?-history-1979-1978-1989-1969
 TEXT-When did the Cold War end?-history-1989-1981-1851-1980
 TEXT-Who was the architect who designed the Millennium Dome?-history-Richard Rogers-Richard Mars-George Hulk-John Craspers
 TEXT-When did the Eurostar train service between Britain and France start running?-history-November 1994-November 1993-November 1984-November 1995
