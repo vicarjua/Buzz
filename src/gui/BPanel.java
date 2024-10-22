@@ -7,9 +7,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
- * Η κλάση BPanel υλοποιεί τα χαρακτηριστικά του πανελ της εφαρμογής. Κληρονομεί
- * από την JPanel.
- *
+ * La clase BPanel implementa las características del panel de la aplicación.
+ * Hereda de JPanel.
  *
  * @author Thanasis
  * @author tasosxak
@@ -22,37 +21,39 @@ public class BPanel extends JPanel {
     private ImageIcon background;
 
     public BPanel() {
-        this(true, "", 0, 0, 1000, 563); //Default μέγεθος του πανελ 
+        this(true, "", 0, 0,1080, 1000); // Tamaño predeterminado del panel
     }
 
     public BPanel(String imageName) {
-        this(true, imageName, 0, 0, 1000, 563); //Πανελ με background φωτογραφία
+        this(true, imageName, 0, 0, 1080, 1920); // Panel con imagen de fondo
     }
 
     public BPanel(boolean visible) {
-        this(visible, "", 0, 0, 1000, 563); //Ορατό ή μη πάνελ
+        this(visible, "", 0, 0, 1080, 1920); // Panel visible o no
     }
 
-    public BPanel(boolean visible, String imageName) {
-        this(visible, imageName, 0, 0, 1000, 563); //Ορατό ή μη πάνελ με background φωτογραφία
+    public BPanel(boolean visible, String imageName) { // Imagen fondo menú
+        this(visible, imageName, 0, 0, 1080, 1920); // Panel visible o no con imagen de fondo
     }
 
     public BPanel(String imageName, int x, int y, int width, int height) {
-        this(true, imageName, x, y, width, height); //Πανελ με διαστάσεις , θέση και background φωτογραφία
+        this(true, imageName, x, y, width, height); // Panel con dimensiones, posición e imagen de fondo
     }
 
     public BPanel(int x, int y, int width, int height) {
-        this(true, "", x, y, width, height); //Πάνελ με διαστάσεις και θέση
+        this(true, "", x, y, width, height); // Panel con dimensiones y posición
     }
 
     public BPanel(boolean visible, String imageName, int x, int y, int width, int height) {
         setOpaque(false);
         setBounds(x, y, width, height);
         setLayout(null);
+        //setLayout(new FlowLayout(FlowLayout.CENTER));
+
         setVisible(visible);
 
         if (!imageName.equals("")) {
-            background = new ImageIcon(getClass().getResource("/images/" + imageName)); //Φόρτωση αρχείου εικόνας 
+            background = new ImageIcon(getClass().getResource("/images/" + imageName)); // Cargar archivo de imagen
         }
 
         /*
@@ -69,14 +70,14 @@ public class BPanel extends JPanel {
 
         super.paintComponent(g);
         if (background != null) {
-            g.drawImage(background.getImage(), 0, 0, getWidth(), getHeight(), null); //Σχεδίαση της φωτογραφίας στο panel
+            g.drawImage(background.getImage(), 0, 0, getWidth(), getHeight(), null); // Dibujar la imagen en el panel
         }
     }
 
     /**
-     * Η setImage επιτρέπει την προσθήκη background image στο πάνελ
+     * El método setImage permite agregar una imagen de fondo al panel
      *
-     * @param imageName Το όνομα του αρχείου εικόνας μαζί με τον τύπο της
+     * @param imageName El nombre del archivo de imagen junto con su tipo
      */
     public void setImage(String imageName) {
 
@@ -93,9 +94,8 @@ public class BPanel extends JPanel {
     }
 
     /**
-     * Η setFocusOnClick μας επιτρέπει να εστιάζουμε στο πανελ όταν γίνεται κλικ
-     * και σε αυτό και όχι σε άλλα components που πιθανό είχαμε την έστιαση
-     * αρχικά σε ένα από αυτά.
+     * El método setFocusOnClick nos permite enfocar el panel cuando se hace clic
+     * en él, y no en otros componentes que inicialmente podrían tener el foco.
      *
      */
     public void setFocusOnClick() {

@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
 import javax.swing.JComponent;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.BasicButtonUI;
 
@@ -40,8 +41,9 @@ public class BButton extends JButton {
         setPreferredSize(new Dimension(300, 70));
         setHorizontalAlignment(CENTER); //Κεντράρισμα στο κέντρο (το κείμενο του κουμπιού)
         setSize(250, 50); //Ορισμός μεγέθου
-        setFont(new Font("Georgia", Font.BOLD, 20)); //Ορισμός γραμματοσειράς
+        setFont(new Font("Georgia", Font.BOLD, 40)); //Ορισμός γραμματοσειράς
         setVisible(true);
+    
         addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

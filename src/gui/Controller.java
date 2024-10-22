@@ -312,7 +312,7 @@ public class Controller {
 
         //playersNumTitle
         playersNumTitle = new BLabel(messages.getString("howManyPlayersLabel"));
-        playersNumTitle.setBounds(0, 50, root.getWidth(), 100);
+        playersNumTitle.setBounds(0, 50, root.getWidth(), 200);
 
         //playersNamesPanel
         playersNamesPanel = new BPanel(false);
@@ -332,7 +332,7 @@ public class Controller {
 
         //questionLabel
         questionLabel = new BLabel(messages.getString("welcomeLabel"), true, SwingConstants.LEFT);
-        questionLabel.setBounds(80, 40, root.getWidth() - 250, 65);
+        questionLabel.setBounds(120, 270, root.getWidth() - 250, 100);
 
         //answersPanel
         answersPanel = new BPanel(true);
@@ -342,7 +342,7 @@ public class Controller {
         answerLabel = new BLabel[4];
         for (int i = 0; i < 4; i++) {
             answerLabel[i] = new BLabel("Answer " + i);
-            answerLabel[i].setBounds(60, 175 + 75 * i, 200, 50);
+            answerLabel[i].setBounds(175, 400 + 100 * i, 200, 100);
             answersPanel.add(answerLabel[i]);
         }
 
@@ -369,8 +369,8 @@ public class Controller {
         countDownLabel = new BLabel();
         questionBackground.add(countDownLabel);
         countDownLabel.setVisible(false);
-        countDownLabel.setBounds(root.getWidth() - 130, 47, 30, 40);
-        countDownLabel.setFont(new Font("Serif", Font.BOLD, 35));
+        countDownLabel.setBounds(root.getWidth() - 350, 47, 30, 40);
+        countDownLabel.setFont(new Font("Serif", Font.BOLD, 50));
 
         //ThermoPanel
         thermoPanel = new BPanel(true);
@@ -449,7 +449,7 @@ public class Controller {
         playersKeysLabel = new BLabel[playersAllowed];
         playersScoresLabel = new BLabel[playersAllowed];
 
-        //Δημιουργία των κουμπιών  και των πλαισιών εισαγωγής ονομάτων
+        //Cuadrados entrada nombres
         for (int i = 0; i < playersAllowed; i++) {
 
             inputNamePlayer[i] = new BTextField(messages.getString("playerLabel") + " " + String.valueOf(i + 1));
@@ -503,7 +503,9 @@ public class Controller {
 
             //Σκορ πάνελ παιχνιδιού
             playersScoresLabel[i] = new BLabel();
-            playersScoresLabel[i].setBounds(0, i * 50 + 130, root.getWidth(), 100);
+            playersScoresLabel[i].setBounds(root.getWidth() - 0, 0, 300, 70);
+        
+           // playersScoresLabel[i].setBounds(0, i * 0 + 0, root.getWidth(), 100);
 
             gameOverPanel.add(playersScoresLabel[i]); //Προστίθενται το σκορπανελ κάθε παίχτη στο πάνελ που θα εμφανίστει στο τέλος του παιχνιδιού
 
@@ -612,8 +614,8 @@ public class Controller {
         //Κουμπιά του μενού
         startButton = new BButton(messages.getString("startButton"));
 
-        startButton.setBounds(root.getWidth() - 340, 113, 300, 70);
-
+       // startButton.setBounds(root.getWidth() - 450, 113, 300, 70);
+// startButton.setBounds(root.getWidth() - 300, 113, 300, 70);
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -641,7 +643,7 @@ public class Controller {
         });
 
         scoresButton = new BButton(messages.getString("scoreButton"));
-        scoresButton.setBounds(root.getWidth() - 340, 213, 300, 70);
+        scoresButton.setBounds(root.getWidth() - 450, 213, 300, 70); //Posición del botón Scores
         scoresButton.addActionListener(new ActionListener() {
 
             @Override
@@ -653,7 +655,7 @@ public class Controller {
         });
 
         exitButton = new BButton(messages.getString("exitButton"));
-        exitButton.setBounds(root.getWidth() - 340, 313, 300, 70);
+        exitButton.setBounds(root.getWidth() - 450, 313, 300, 70);
 
         exitButton.addActionListener(new ActionListener() {
 
@@ -1007,14 +1009,14 @@ public class Controller {
         scoreLabel = new BLabel[players];
         for (int i = 0; i < players; i++) {
             scoreNameLabel[i] = new BLabel(game.getNameByPlayerId(i + 1));
-            scoreNameLabel[i].setBounds(782, i * 74 + 166, 90, 40);
+            scoreNameLabel[i].setBounds(i* 125 + 40, 840, 90, 40);
 
             Integer score = game.getScoreByPlayerId(i + 1);
             if (score == null) {
                 score = 0;
             }
             scoreLabel[i] = new BLabel(score.toString());
-            scoreLabel[i].setBounds(782, i * 74 + 200, 90, 40);
+            scoreLabel[i].setBounds(i* 125 + 40, 870, 90, 40);
 
             scorePanel.add(scoreNameLabel[i]);
             scorePanel.add(scoreLabel[i]);
@@ -1048,7 +1050,7 @@ public class Controller {
         thermometerIcon = new BPanel[players];
         for (int i = 0; i < players; i++) {
             thermometerIcon[i] = new BPanel("buzz_images/thermo_0.png"); //Αρχικοποιεί όλους τους παίχτες με άδεια θερμόμετρα
-            thermometerIcon[i].setBounds(root.getWidth() - 105, i * 77 + 183, 30, 50);
+            thermometerIcon[i].setBounds(root.getWidth() - 150, i * 77 + 183, 30, 50); //posición del termometro
             thermometerIcon[i].setVisible(false);
             thermoPanel.add(this.thermometerIcon[i]);
         }

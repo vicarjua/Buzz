@@ -8,7 +8,6 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
 
 /**
  * Η κλάση BTextField υλοποιεί τα χαρακτηριστικά του πλαίσιου κειμένου της εφαρμογής. Κληρονομεί
@@ -35,9 +34,12 @@ public class BTextField extends JTextField {
         setOpaque(false);
         setSize(200, 40);
         setText(placeHolder); 
-        setFont(new Font("Comic Sans MS", Font.PLAIN, 20)); //Γραμματοσειρά 
-        setBorder(new EmptyBorder(5, 15, 5, 15)); //padding και κλίση γωνιώνν
+        setFont(new Font("Arial", Font.PLAIN, 20)); //Γραμματοσειρά 
+        //setBorder(new EmptyBorder(5, 100, 5, 15)); //padding και κλίση γωνιώνν
         setForeground(Color.GRAY); //χρώμα γραμματοσειράς
+
+         // Alinear texto al centro
+         setHorizontalAlignment(JTextField.CENTER);
 
         //Αν έχει πατηθεί το textfield
         addFocusListener(new FocusAdapter() {

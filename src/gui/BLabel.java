@@ -25,11 +25,11 @@ public class BLabel extends JLabel {
         this("");
     }
 
-    public BLabel(String text) {
+    public BLabel(String text) { //Titulo jugadores, teclas y respuestas
         this(text, 20, false, SwingConstants.CENTER);
     }
 
-    public BLabel(String text, boolean multiLine, int alignment) {
+    public BLabel(String text, boolean multiLine, int alignment) { //Pantalla intermedia y preguntas
         this(text, 20, true, alignment);
     }
 
@@ -38,10 +38,10 @@ public class BLabel extends JLabel {
     }
 
     public BLabel(String text, int fontSize, boolean multiLine, int alignment) {
-        setFont(new Font("Comic Sans MS", Font.PLAIN, fontSize)); //Ορισμός γραμματοσειράς
+        setFont(new Font("Arial", Font.PLAIN, fontSize)); //Ορισμός γραμματοσειράς
         setForeground(Color.white); //Ορισμός χρώματος γραμματοσειράς
 
-        center = false;
+        center = true;
         if (alignment == SwingConstants.CENTER) {
             center = true;
         }

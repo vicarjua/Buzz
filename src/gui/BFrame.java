@@ -29,8 +29,8 @@ public class BFrame extends JFrame {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle(name);
-        setResizable(false);
-        getContentPane().setPreferredSize(new Dimension(563, 1000));
+        setResizable(true);
+        getContentPane().setPreferredSize(new Dimension(1080, 1920));
         pack();
         pack();
         setLocationRelativeTo(null);
@@ -43,7 +43,7 @@ public class BFrame extends JFrame {
         window.getContentPane().add(
                 new JLabel("", new ImageIcon(getClass().getResource("/images/buzz_images/1.jpg")), SwingConstants.CENTER));
 
-        window.setSize(580, 278);
+        window.setSize(563, 1000);
         window.setLocationRelativeTo(null); //στοίχηση στο κέντρο
 
         window.setVisible(true);

@@ -43,7 +43,7 @@ public class Game {
         idsPlayed = new ArrayList<>(); //Δημιουργία λίστας με τα id των παιχτών που θα παίξουν
         this.keys = new ArrayList<>(); //Δημιουργία λίστας με τα σύνολα κλειδιών (πλήκτρα) που θα έχει ο κάθε παίχτης
         highScores = new HighScores(); //Φόρτωση των παιχτών (serialization)
-        maxPlayers = 2; //Μέγιστο πληθος επιτρεπτών παιχτών , εύκολα αλλάζει σε 3 , 4 ή και παραπάνω παίχτες....
+        maxPlayers = 4; //Μέγιστο πληθος επιτρεπτών παιχτών , εύκολα αλλάζει σε 3 , 4 ή και παραπάνω παίχτες....
 
         setLocale(new Locale("gr", "GR")); //By default η γλώσσα είναι στα ελληνικά και άρα φορτώνει το ελληνικό αρχείο ερωτήσεων 
 
@@ -120,8 +120,8 @@ public class Game {
         //Προσθήκη πληκτρών 
         this.keys.add("asdf");
         this.keys.add("hjkl");
-        // this.keys.add("zxcv");
-        //  this.keys.add("uiop");
+        this.keys.add("zxcv");
+        this.keys.add("uiop");
 
         this.lastPlayerID = 1;    //Αρχικοποιείται η μεταβλητή που υποδηλώνει ποιος παίχτης έπαιξε τελευταίος (είναι χρήσιμο για κάποια rounds)
         playersLeftToAdd = maxPlayers; // Αρχικοποιείται η μεταβλητή που υποδηλώνει πόσοι παίχτες επιτρέπονται ακόμα 
