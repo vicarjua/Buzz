@@ -23,6 +23,8 @@ public class BFrame extends JFrame {
 
     JWindow window = new JWindow();
 
+    
+
     public BFrame(String name) {
 
         loadImage();  //SplashScreen (φόρτωση αρχικής εισαγωγικής εικόνας)
@@ -34,8 +36,14 @@ public class BFrame extends JFrame {
         pack();
         pack();
         setLocationRelativeTo(null);
+         // Añadir esta línea para escalar todo al 50%
+         setSize((int)(1080 * 0.5), (int)(1920 * 0.5)); // Establecer el tamaño a la mitad
 
     }
+
+
+
+
 
     private void loadImage() {
 
